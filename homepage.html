@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/ico.png" type="image/x-icon">
+    <title>dummes - homepage</title>
+</head>
+<body>
+
+    <div id="scrollContainer">
+      <div id="scrollbar"></div>
+    </div> 
+
+
+    
+    <div class="page-shell">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="logo" href="homepage-en.html">dummes</a>
+
+         <ul class="nav-links">
+                <li><a href="givememoney.html">GIVE ME MONEY</a></li>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+            </ul>                                                         
+        </nav>  
+
+                                                                              <!--why are you looking at my code dude-->
+
+        <main class="hero">
+            <p class="profession"><span class="bum">PROFESSIONAL BUM</span></p>
+            <h1 class="mheading"> <span class="hello">Hello</span><br> <span class="everyone">everyone</span></h1>
+        </main>
+    </div>
+                                                                   
+      <div class="signal-container">
+        <div class="signal">
+          <span class="dot"></span>
+          <span class="signal-text">terminally online</span>  <!--🤞son-->
+        </div>
+      </div>
+
+ <div class="container">
+    <div class="slide">
+          <div class="track">
+    <span>i know how to make eggs</span>
+    <span>i once had 1 SOL, i lost it</span>
+    <span>i am dumb</span>
+    <span>i know coding, barely</span>
+    <span>you are dumb too, deepshit</span>
+    <span>i am a minor, don't be weird</span>
+    <span>i am antisocial</span>
+
+    <span>i know how to make eggs</span>
+    <span>i once had 1 SOL, i lost it</span>
+    <span>i am dumb</span>
+    <span>i know coding, barely</span>
+    <span>you are dumb too, deepshit</span>
+    <span>i am a minor, don't be weird</span>
+    <span>i am antisocial</span>
+  </div>
+    </div>
+ </div>   
+ 
+ 
+  <div class="design">
+    <h1 class="design-h1">I stole this design from <a class="design-a" href="https://dvdrod.com/">David Rodriguez</a> btw.<br>Check it out.</h1>
+  </div>
+
+        <div class="grid-container">
+    <div class="grid">
+        <div class="line-1-2">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        </div>
+        <div class="line-3"></div>                   <!--fun fact: im from greece, -->
+        <div class="line-3"></div>
+    </div>
+        </div>        
+
+        <div class="about-container">
+            <h1 class="about-h1">I'm dummes</h1>
+            <p class="about-p">So basically, i play video games all day. Sometimes i 
+              open VS code and pretend to know it works <br> (half my code  
+              is by chatgpt basically).  I don't know else is there to say, 
+              that's it i guess. If you want to talk to me about anything <br>
+              (idk why you would do that)  message me or send me an 
+              email you fucking boomer.
+              <br><br><br>
+              I'll probably add more stuf to this page in the future, probably. 
+              Come back in like two months to see if there's anything new</p>
+        </div>
+
+          
+
+        <div class="button-thing">
+          <h1 class="button-h1">Anyways, click this <span class="button-span">cool</span> button i made</h1>
+        <div class="wrapper-button">
+          <button id="weirdBtn">do something</button>
+        </div>
+        </div>
+
+        <div class="footer-line"></div>
+
+        <footer>  
+            <p class="footer-p">dummes &#169; 2026</p>  <!--dummes means dumb in german btw-->
+          <div class="socials"> 
+            <a class="discord" href="https://discord.com/users/1482841127395659786">DISCORD</a>
+            <a class="github" href="https://github.com/dummes01">GITHUB</a>
+            <a class="dummes" href="">DUMMES</a>
+          </div>               
+        </footer>
+
+
+        <div id="idlePopup" class="idle-popup">
+            you’re just staring now
+        </div>
+
+
+<!--button-->
+<script>
+const btn = document.getElementById("weirdBtn");
+let clicks = 0;
+
+btn.addEventListener("click", () => {
+  clicks++;
+
+  if (clicks === 1) {
+    btn.textContent = "ok";
+  } 
+  else if (clicks === 2) {
+    btn.textContent = "again?";
+  } 
+  else if (clicks === 3) {
+    btn.textContent = "you’re still here";
+  } 
+  else if (clicks === 5) {
+    btn.textContent = "this does nothing";
+  } 
+  else if (clicks === 7) {
+    btn.textContent = "seriously";
+  } 
+  else if (clicks === 10) {
+    btn.textContent = "you can stop now";
+  } 
+  else if (clicks === 14) {
+    btn.textContent = "…";
+
+  } else if (clicks === 25) {
+    btn.textContent = "i think you should leave now";
+
+  } else if (clicks > 35) {
+    btn.textContent = "just get the fuck out";
+    
+    // slight movement (very subtle)
+    btn.style.transform = `translateX(${Math.random()*10 - 5}px)`;
+  }
+});
+</script>
+
+<!--afk-->
+
+<script>
+(function () {
+  let timer;
+  let shown = false;
+
+  const popup = document.getElementById("idlePopup");
+
+  const messages = [
+    "you’re just staring now",
+    "you’ve been here a while",
+    "this site isn’t that interesting",
+    "i think you’re looking for something",
+    "seeing something i don't?",
+    "you got lost or what",
+    "why are you just sitting there?"
+  ];
+
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+
+    popup.textContent =
+      messages[Math.floor(Math.random() * messages.length)];
+
+    popup.classList.add("show");
+  }
+
+  function resetTimer() {
+    popup.classList.remove("show");
+    clearTimeout(timer);
+    timer = setTimeout(showPopup, 10000);
+  }
+
+  ["mousemove", "keydown", "scroll", "click"].forEach(function (event) {
+    document.addEventListener(event, resetTimer);
+  });
+
+  resetTimer();
+})();
+</script>
+
+
+<!-- animation -->        
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.design').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
